@@ -809,7 +809,7 @@ textarea {
 .input-text {
     position: absolute;
     display: block;
-    top: 0;
+    top: -18px;
     left: 0;
     font-weight: 400;
     font-size: 12px;
