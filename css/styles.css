@@ -898,7 +898,12 @@ textarea {
     background-origin: border-box;
 }
 
-
+.checkbox:focus + .icon-check {
+    fill: var(--brand-color);
+    background-color: var(--brand-color);
+    background-image: url(../images/icon-check.svg);
+    background-origin: border-box;
+}
 
 
 .button-form {
