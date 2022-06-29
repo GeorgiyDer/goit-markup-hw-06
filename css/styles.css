@@ -31,6 +31,38 @@ ul {
     margin: 0;
     padding: 0;
 }
+
+a:active,
+a:focus {
+    outline: none;
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+input:active,
+textarea:active {
+    outline: none;
+}
+
+:focus {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+textarea {
+    resize: horizontal;
+}
+
 .list {
     list-style: none;
 }
@@ -720,6 +752,11 @@ ul {
 
 
 /* ФОРМА МОДАЛКИ */
+
+
+
+
+
 .form b {
     display: block;
     margin-bottom: 12px;
@@ -732,92 +769,135 @@ textarea {
 }
 
 
-.form {
-    
-}
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 58px;
+    margin-bottom: 10px;
     
 }
+.coment-group {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 138px;
+    margin-bottom: 20px;
+}
+
+
 .form-group:not(:last-child) {
     margin-bottom: 10px;
 }
 .form-lable {
-    display: flex;
-    padding-bottom: 4px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.16em;
-    letter-spacing: 0.01em;
-    color: var(--secondary-text-color);
-}
-
-
-.form-group {
+    position: absolute;
+    bottom: 0;
     display: block;
-    width: 100%;
-    position: relative;
+    width: 100%;  
 }
+
 
 .icon-person {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 12px;
     transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-text {
     position: absolute;
     display: block;
-    top: -20;
+    top: 0;
     left: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.166;
+    letter-spacing: 0.01em;
+    color: #757575;
 
 }
 .form-input {
     height: 40px;
     width: 100%;
+    padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-   
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+.form-input:focus + .icon-person {
+    fill: var(--brand-color);
+
 }
 
+.form-input:focus {
+    border-color: var(--brand-color);
+}
 .coment-input {
+    display: block;
     padding: 12px 16px;
     height: 120px;
     width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
-.inputs {
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
+
+.coment-input:focus {
+    border-color: var(--brand-color);
 }
+
+
+
 .checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+.checkbox-field {
     margin-bottom: 30px;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
-    /* height: 24px */
+    height: 24px
     
 }
+
+/* .icon-check {
+    display: block;
+} */
 .checkbox-input {
-    
     margin-right: 8px;
 }
 .checkbox-lable {
+    display: flex;
+    align-items: center;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71em;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
 }
-.checkbox a {
+.checkbox-lable a {
     text-decoration: underline;
     color: #2196F3;
 }
+.icon-check {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-right: 8px;
+}
+.checkbox:checked + .icon-check {
+    fill: var(--brand-color);
+    background-color: var(--brand-color);
+    background-image: url(../images/icon-check.svg);
+}
+
+
+
 
 .button-form {
     display: block;
@@ -835,11 +915,21 @@ textarea {
     font-size: 16px;
     line-height: 1.875em;
     letter-spacing: 0.06em;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
+.button-form:focus {
+    background: #188CE8;
+}
 
+.icon-modal-close {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.modal-button:focus>.icon-modal-close {
+    fill: var(--brand-color);
+}
 
 
 

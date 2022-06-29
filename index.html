@@ -258,39 +258,47 @@
         </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
-        <div class="modal"><button type="button" class="modal-button" data-modal-close><svg width="11px" height="11px">
-            <use href="./images/icons.svg#close"></use></svg></button>
+        <div class="modal"><button type="button" class="modal-button" data-modal-close><svg class="icon-modal-close" width="18px" height="18px">
+            <use href="./images/icons.svg#close-black"></use></svg></button>
             
             <form action="" class="form">
                 <b>Оставьте свои данные, мы вам перезвоним</b>
                 
                 <div class="form-group">
-                    <label for="name" class="form-lable"><span class="input-text">Имя</span><input type="text" name="name" id="name" class="form-input"><svg class="icon-person" width="18px" height="18px">
-                        <use href="./images/icons.svg#person-black"></use>
-                    </svg>
+                    <label for="name" class="form-lable"><input type="text" name="name" id="name" class="form-input"><svg class="icon-person" width="18px" height="18px">
+                        <use href="./images/icons.svg#person-black"></use></svg>
                     </label>
+                    <span class="input-text">Имя</span>
                 </div>
                 
                 <div class="form-group">
-                    <label for="tel" class="form-lable">Телефон</label>
-                    <input type="tel" name="tel" id="tel" class="form-input">
+                    <label class="form-lable"><input type="tel" name="tel" class="form-input"><svg class="icon-person" width="18px" height="18px">
+                        <use href="./images/icons.svg#phone-black"></use></svg>
+                    </label>
+                    <span class="input-text">Телефон</span>
+                    
                 </div>
                 
                 <div class="form-group">
-                    <label for="mail" class="form-lable">Почта</label>
-                    <input type="email" name="mail" id="mail" class="form-input">
-                
+                    <label class="form-lable"><input type="email" name="mail" class="form-input"><svg class="icon-person" width="18px" height="18px">
+                        <use href="./images/icons.svg#email-black"></use></svg>
+                    </label>
+                    <span class="input-text">Почта</span>
                 </div>
-                <div class="form-group">
-                    <label for="coment" class="form-lable">Комментарий</label>
-                    <textarea name="coment" id="coment" class="coment-input" placeholder="Введите текст"></textarea>
+                <div class="coment-group">
+                    <label class="form-lable"><textarea name="coment" class="coment-input" placeholder="Введите текст"></textarea>
+                    </label>
+                    <span class="input-text">Комментарий</span>
                 </div>
             
 
-                <div class="checkbox">
-                    <input type="checkbox" class="checkbox-input" name="policy" id="policy">
-                    <label for="policy" class="checkbox-lable">Соглашаюсь с рассылкой и принимаю <a href="" class="link">Условия договора</a></label>
-                </div> -->
+                <div class="checkbox-field">
+                    <label class="checkbox-lable"><input type="checkbox" class="checkbox" name="policy">
+                    <svg class="icon-check" width="15px" height="15px">
+                        <use href="./images/icons.svg#checkbox-empty"></use></svg>
+                    <span>Соглашаюсь с рассылкой и принимаю <a href="" class="link">Условия договора</a></span> 
+                    </label>
+                </div>
                 
                 
                 <button type="submit" class="button-form">Отправить</button>
