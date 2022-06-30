@@ -751,6 +751,7 @@ textarea {
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    cursor: pointer;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -943,6 +944,9 @@ textarea {
     fill: var(--brand-color);
 }
 
+.modal-button:hover>.icon-modal-close {
+    fill: var(--brand-color);
+}
 
 
 
@@ -980,6 +984,9 @@ textarea {
     color: rgba(255, 255, 255, 0.6);
 }
 
+.footer-input:focus {
+    color: var(--white-color);
+}
 .button-footer {
     display: flex;
     align-items: center;
